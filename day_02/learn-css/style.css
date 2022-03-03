@@ -1,0 +1,9 @@
+h1 {
+    color: aquamarine;
+}
+
+@media (min-width:1200px) {
+    div.footer {
+        flex-direction: row;
+    }
+}

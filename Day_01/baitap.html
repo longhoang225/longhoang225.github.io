@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>techmaster</title>
+</head>
+
+<body>
+    <H1>Phân tích nghiệp vụ: Action - Event - Status</H1>
+    <p><em>Gần đây tôi tham gia thiết kế một dự án. Các thành viên trong nhóm cứ tạo những bảng có trường status, rồi
+            thêm trường create_date và modified_date nhìn rất giống trong sách. Nhưng họ không hiểu rõ khác biệt giữa
+            Action (Hành động) - Event (Sự kiện) - Status (Trạng thái) trong phân tích thiết kế phần mềm. Kết quả là
+            bảng nhiều, cột nhiều nhưng không xử lý hết yêu cầu nghiệp vụ. Bàn tới bàn lui, mà không giải quyết được
+            nghiệp vụ.</em>
+    <h2>Action là động từ, Event là danh từ, còn Status là tính từ<h2>
+
+            <p>Action: Khách hàng đặt hàng - customer orders an item</p>
+            <br>
+            <p>Event: Bản ghi đơn hàng được tạo ra - order record is created</p>
+            <br>
+            <p>Status: Trạng thái của đơn hàng là "được tạo" - order status is "created"</p>
+            <br>
+            <p>Khi chúng ta lấy yêu cầu từ khách hàng, tạo user story thì khách hàng thường mô tả: Ai đó làm gì? Ví dụ:
+            </p>
+            <p><i>Khách hàng đăng nhập -> khách hàng truy vấn tài khoản -> khách hàng nhập tài khoản cần chuyển khoản ->
+                    khách hàng chọn ngân hàng -> khách hàng gõ số tiền cần chuyển -> Hệ thống gửi mã OTP -> khách hàng
+                    nhập xác nhận -> tiến hành chuyển khoản -> Hệ thống gửi biên lai chuyển khoản.</i></p>
+            <br>
+            <p>Action mô tả một người (role) hành động hay hệ thống (system) thực hiện tác vụ. Ở đây tôi cố ý phân biệt:
+            </p>
+            <ul>
+                <div style="font-style: normal; font-size: medium;">
+                    <li>Người tác động lên một đối tượng - User does some thing </li>
+                    <li> Hệ thống (phần mềm) thì thực hiện tác vụ - System run a task</li>
+                    Nếu bạn sử CSDL quan hệ bạn có thể lưu lại từng dòng action theo thời gian. Tuy nhiên sau một hành
+                    động
+                    có ít nhất 2 sự kiện: thành công hoặc thất bại. Nếu bạn chỉ quan tâm đến sự kiện hữu ích với hệ
+                    thống
+                    thì bạn nên dùng event.
+                </div>
+
+            </ul>
+            <h2>Liệt kê đủ sự kiện / tác vụ phát sinh sau một hành động ban đầu.</h2>
+            <p>Khi khách hàng đặt mua một mặt hàng ~ action: customer orders an item. Có những sự kiện và tác vụ phát
+                sinh:</p>
+            <ol>
+                <li> Event: Đơn hàng được tạo ra ~ order is created.</li>
+                <li>Action: Hệ thống kho kiểm tra số lượng hàng tồn kho - inventory check item availability. Hoặc với
+                    shop nhỏ, chỉ
+                    cần truy vấn số lượng hàng có sẵn.</li>
+                <li><span style="color: blue;" nếu mặt hàng ở trạng thái hết hàng (status out of stock) --> action: hệ
+                        thống tự động đặt mua bổ
+                        xung hàng hoặc
+                        trả về thông báo hết hàng hoặc email thông báo cho phòng đặt hàng.</li>
+                Liệt kê đủ thì cơ bản hiểu được yêu cầu nghiệp vụ. Nhưng việc chúng ta hiện thực hoá nghiệp vụ như thế
+                nào xin mời
+                đọc tiếp.
+
+            </ol>
+
+
+
+
+</body>
+
+</html>
