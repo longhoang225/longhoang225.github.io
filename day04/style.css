@@ -1,0 +1,39 @@
+.container {
+    display: flex;
+    background-color: beige;
+    flex-direction: row;
+    justify-content: center;
+    height: 500px;
+    /* align-items: baseline;
+    flex-wrap: wrap-reverse;
+    align-content: center; */
+    /* flex-flow: column; */
+}
+
+.item {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    color: aliceblue;
+    font-size: 2rem;
+    margin: 1rem;
+    /* text-align: center;
+    line-height: 100px;  ap dung vs 1 dong*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item1 {
+    order: 2;
+    /* flex-grow: 2; */
+}
+
+.item4 {
+    order: -1;
+    flex-basis: 200px;
+    /* flex-grow: 1;
+    flex-shrink: 2; */
+    align-self: flex-end;
+    /* viet tat flex: 1 2 200px */
+}
