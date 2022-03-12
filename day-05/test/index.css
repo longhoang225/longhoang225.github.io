@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    margin-top: 100px;
+}
+
+.box1 {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+}
+
+.partent {
+    width: 100px;
+    height: 100px;
+    background-color: brown;
+}
+
+.buttom {
+    position: absolute;
+    z-index: 10;
+}
